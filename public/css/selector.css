@@ -1,0 +1,286 @@
+/* #test:target{
+  color:red;
+}
+.link:link{
+color:blueviolet
+}
+#testt:active {
+color: black;
+}
+a {
+  font-size: 40px;
+}
+.card-warning:active {
+  background-color: brown;
+}
+/* .card:hover{
+border: 1px solid red;
+} */
+/* input {
+  background-color: grey;
+}
+input:focus{
+  background-color: red;
+}
+.card:focus-within {
+background-color: darkorange;
+}
+.ton:lang(en){
+  background-color:aqua;
+}
+.ton:lang(fr){
+  background-color: black;
+}
+button{
+  background-color: blue;
+  color: beige;
+}
+
+button:enabled{ 
+  background-color: coral;
+}
+button:disabled{
+  background-color: plum;
+}
+.int:read-write{
+  color: rgb(43, 25, 3);
+}
+input[type="checkbox"]:checked~ span{
+  background-color: darkkhaki;
+}
+.number:in-range{
+  background-color: darkgreen;
+}
+.number:invalid{
+  background-color: darkmagenta;
+}
+  */
+
+
+@keyframes fly{
+  from {
+    top:0;
+    left:0;
+    background-color: #10d35b;
+    }
+    25%{
+      bottom: 0;
+      right: 0;
+      background-color: #d3c610;
+    }
+    50%{
+      left: 0;
+      background-color: blueviolet;
+    }
+  to {
+    top:0;
+    right: 0;
+    background-color: cyan;
+  }
+}
+
+.btn:hover{
+  color:red;
+  background-color: yellow;
+}
+a:hover + h1 {
+  background-color: green;
+}
+.lesson-four-task-one{
+  position: fixed;
+  top:10px;
+  z-index: 1;
+}
+.lesson-four-task-three .link:visited{
+  color: yellow;
+
+} 
+.lesson-four-task-four #sidebar a:link {
+  color: red;
+}
+.lesson-four-task-five .btn:active {
+  background-color: blue;
+}
+.lesson-four-task-six .btn:focus {
+  background-color: orange;
+  color: orange;
+}
+#target:target{
+  color:rgb(255, 255, 255);
+  background-color: green;
+}
+input[type="checkbox"]:checked~ #target{
+  background-color: rgb(40, 16, 179);
+  color: white;
+}
+p:lang(uk){
+  color:blue;
+}
+.form-group input:enabled{
+  background-color: yellow;
+  color: red;
+}
+.lesson-four-task-eleven input:disabled{
+  background-color: yellow;
+
+}
+
+.lesson-four-task-twelve input:not([readonly]) {
+  background-color: yellow;
+}
+.lesson-four-task-thirteen input[readonly] {
+  background-color: yellow;
+}
+.lesson-four-task-fourteen input[type='text']:valid {
+  background-color: green;
+}
+
+.lesson-four-task-fourteen input[type='text']:invalid {
+  background-color: red;
+}
+.lesson-four-task-fifteen > form > input[type='text'][required] {
+  background-color: green;
+}
+
+.lesson-four-task-fifteen > form > input[type='text'][optional] {
+  background-color: red;
+}
+
+.lesson-four-task-sixteen #quantity[type="number"]:out-of-range{
+color: rgb(180, 5, 5);
+}
+.lesson-four-task-seventeen input[type="number"]:in-range{
+  color: rgb(180, 5, 5);
+  }
+  input[type='text']::placeholder {
+    color: red;
+    background-color: #ff0000;
+  }
+  
+  input[type='text']:focus::placeholder {
+    color: transparent;
+    background-color: transparent;
+  }
+  .btn-group button:focus-within{
+    color: white;
+    background-color: yellow;
+  }
+
+  
+  .lesson-four-task-twenty input:invalid {
+    background-color: red;
+    color: white;
+  }
+  .slider{
+   
+    background: navy;
+    width:30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 20px;
+    color: white;
+    position: absolute;
+    top: calc(50% - 15px);
+ }
+.img {
+   
+}
+.lorem {
+  margin: 20px;
+  position: relative;
+}
+.slider:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+.slider_left{
+  left: var(--space-1);
+}
+.slider_right{
+
+right: 10px;
+}
+
+.model {
+  position: fixed;
+  top: 200px;
+  left:200px;
+  /* top:calc(50% - 150px);
+  left: calc(50% - 150px); */
+  height: 150px;
+width:150px;
+background-color: #ff0000;
+padding: 20px;
+border-radius: 20px;
+line-height: 150%;
+transition-property: left;
+transition-duration: 3s;
+transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+transition-delay: 2s;
+}
+body:hover .model {
+  left:600px;
+  animation-name: fly;
+  animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+ animation-direction:alternate;
+
+
+}
+.rodel {
+  position: sticky;
+  top:100px;
+  left: 50px;
+  height: 100px;
+width:250px;
+background-color: #10d35b;
+padding: 20px;
+border-radius: 20px;
+line-height: 150%;
+z-index: 2;
+}
+.img{
+  height: 30px;
+  width: 30px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.j{
+  clear: left;
+  user-select: none;
+}
+.imgh{
+  height: 30px;
+  width: 30px;
+float: left;
+  margin-top: 10px;
+  margin-right: 10px;
+  object-position: top left;
+}
+:root{
+  scroll-behavior: smooth;
+}
+.nu{
+  transition-property: background-color;
+  transition-duration: 1s;
+}
+.nu:hover{
+  background-color: #10d35b;
+}
+.nul{
+  background-color: black;
+  opacity: 0.7;
+}
+.nul:hover{
+  /* /* transition: opasity 1s, background-color 2s; */
+color:red; 
+
+}
+.lesson-four-task-seventeen {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+}

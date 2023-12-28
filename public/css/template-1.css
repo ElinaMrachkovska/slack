@@ -1,0 +1,153 @@
+.page{
+display: 960px;
+margin: 0 15px;
+padding: 25px;
+justify-content: space-between;
+align-items: center;
+background: #FFF;
+}
+.page_content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.header{
+    padding: 25px;
+}
+.header_logo{
+size:28px;
+}
+
+.divider{
+    margin: 0;
+    height: 1px;
+    background-color: #DEE2E6;
+}
+
+.nav{
+display: block;
+}
+
+.nav_link{
+color: #343A40;
+text-decoration: none;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.nav_link:hover{
+text-decoration: underline;
+color: aqua;
+}
+.nav_vertical > .nav_link{
+display: block;
+}
+.nav_vertical > .nav_link:not(:last-child){
+margin-bottom: 24px;
+}
+.nav_inline > .nav_link:not(:last-child){
+margin-right: 24px;
+}
+.header_nav_right{
+    margin-left: auto;
+    width: fit-content;
+}
+.page_block:not(:last-of-type){
+    margin-bottom: 80px;
+}
+.footer{
+    padding: 24px 0;
+}
+.footer_copyright{
+    color: #6C757D;
+font-size: 12.8px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top:12px;
+display: block;
+}
+.footer_title{
+    color: #212529;
+
+    font-family: Roboto;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 12px;
+}
+.hero_title{
+    color: #212529;
+
+text-align: center;
+font-family: Roboto;
+font-size: 56px;
+font-weight: 500;
+margin: 12px;
+}
+.hero_text{
+    color: #212529;
+text-align: center;
+font-family: Roboto;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+max-width: 585px;
+margin: 0 auto;
+}
+
+.plans_card:not(:last-of-type){
+    margin-right: 24px;
+}
+
+.card-header{
+    padding: 12px;
+    text-align: center;
+    color: #212529;
+font-size: 24px;
+}
+.card-body{
+    padding: 24px;
+    text-align: center;
+}
+.card_block{
+    text-align: center;
+    margin-bottom: 24px;
+    color: #212529;
+    display: block;
+}
+.card_price_amount{
+text-align: center;
+font-family: Roboto;
+font-size: 40px;
+font-style: normal;
+font-weight: 500;
+}
+.card_price_duration{
+    color: #6C757D;
+
+text-align: center;
+font-family: Roboto;
+font-size: 29px;
+font-style: normal;
+font-weight: 400;
+}
+.card_description_item{
+color: #212529;
+
+
+font-family: Roboto;
+font-size: 16px;
+display: block;
+}
+.card_description_item:not(:last-of-type){
+    margin-bottom: 12px;
+}
+.card_block:not(:last-of-type){
+    margin-bottom: 24px;
+}
+.card_button{
+    display: block;
+    width:100%;
+    font-size: 19px;
+}
