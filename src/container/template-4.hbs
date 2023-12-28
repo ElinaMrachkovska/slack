@@ -1,0 +1,54 @@
+<header class="header row g-0">
+    <div class="col-3">
+        {{> logo}}
+    </div>
+
+    <nav class="header_nav col-9 ">
+        <div class="header_nav_right">
+            {{>nav list=header}}
+        </div>
+    </nav>
+</header>
+
+{{#with main}}
+<main class="main">
+      <img src="{{image}}" alt="main img">
+      <div class="main_content">
+        <h1 class="main_title">{{heading}}</h1>
+        <p class="main_text">{{description}}</p>
+ <a href="{{href}}" class="grey_button">{{button}}</a>
+    </div>
+ </main>
+
+{{/with}}
+
+  <section class="row featured">
+    {{#each featured}}
+
+ {{> featured data=this}} 
+    {{/each}}
+  </section>
+  <section class="actions">
+{{#each actions}}
+      <div class="actions_cont">
+        <p class="act">{{heading}}</p>
+      <a href="{{url}}" class="form_button">{{text}}</a>
+    </div>
+ {{/each}}
+  </section>
+
+
+
+
+<footer class="row footer">
+    <div class="col-3">
+        {{> logo}}
+        <span class="footer_copyright">@ 2023-2024</span>
+    </div>
+    {{#each footer}}
+    <div class="col-3">
+        <span class="footer_title">{{title}}</span>
+        {{> nav list=links }}
+    </div>
+    {{/each}}
+</footer>
