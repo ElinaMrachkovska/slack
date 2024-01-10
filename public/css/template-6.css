@@ -124,25 +124,36 @@ width: 100%;
   align-self: stretch;
 }
 .main{
-  display:flex;
+  display:grid;
+  grid-template-columns: repeat( 1fr);
+  grid-template-rows: repeat( 1fr);
+  grid-template-areas:
+   "massages massages form"
+    "advantages advantages advantages";
+  /* display:flex;
   gap:80px;
-  align-items: flex-start;
+  align-items: flex-start; */
 
 }
 
 .massages{
-max-width: 582px;
-width:100%;
+/* max-width: 582px;
+width:100%; */
+height: 100%;
+grid-area: massages;
 background-color: var(--color-white);
-margin-right: var(--size-b);
-padding: var(--size-b);
+
+padding-bottom: var(--size-b);
 display: flex;
 flex-direction: column;
 gap: var(--space-l);
-grid: 2;
+
 
 }
 
+.advantages {
+  grid-area: advantages;
+}
 .massages h1{
   width: 582px;
 color: var(--color_title);
@@ -173,7 +184,7 @@ line-height: 36px;
 
 
 .form{
-  
+  grid-area: form;
 display: flex;
 flex-grow:1;
 padding: 60px 48px ;
@@ -184,13 +195,14 @@ border-radius: var(--border-radius);
 border: var(--color-border);
 background: #F8F9FA;
 margin-left: 0px;
-
 }
+
 hr{
   align-self: stretch;
-width:100%;
+  width:100%;
   opacity: 0.25;
-  background: #212529;}
+  background: #212529;
+}
 .form_info{
   color: #6C757D;
   font-size: 14px;

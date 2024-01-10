@@ -198,8 +198,20 @@ font-weight: 400;
 
 
 .advantages{
-  display: flex;
-  gap: var(--size-l);
+  /* display: flex;
+  gap: var(--size-l); */
+display: grid;
+/* grid-template-columns: fit-content (30px) 1fr; */
+/* grid-template-columns:2fr 1fr 1fr; */
+
+/* або так
+grid-template-columns: repeat(3, 1fr); */
+grid-template-rows: 1fr;
+/* grid-template-columns: min-content 1fr 1fr 1fr; */
+grid-template-columns: repeat(
+   auto-fit, /*видалення пустого простору справа від колонок */
+  minmax(200px, 1fr)
+);
 }
 .advantages > div{
   display: flex;
