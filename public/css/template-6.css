@@ -81,6 +81,7 @@ width: 100%;
   line-height: 100%;
   flex-direction: column;
   justify-content: center;
+  margin-right:0;
 
   gap: var(--space-m);
 }
@@ -91,17 +92,22 @@ width: 100%;
 .nav_vertical {
   flex-direction: column;
   gap: var(--space-m);
+ 
 }
 
 .footer {
-  padding: var(--space-l) 0;
+  /* padding: var(--space-l) 0;
   border-top: 1px solid var(--color-border);
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  
+  width: 100%; */
+  display: grid;
+grid-template-columns: repeat(4, 1fr);
+
+justify-content: center;
 
 }
+
 .foot{width: 25%;}
 .footer_copyright {
   color: var(--color-text);
