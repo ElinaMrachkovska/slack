@@ -12,6 +12,7 @@ body {
     --color-white: #fff;
     --color-black: #000;
     --color-primary: #611F69;
+    --color-light: #F4EDE4;
    
 
     --page-width-d:1260px;
@@ -29,26 +30,34 @@ body {
     --size-1:14px;
     --size-2:18px;
     --size-3:22px;
-    --size-4:14px;
+    --size-4:26px;
+    --size-5: 30px;
+    --size-6: 34px;
 
     --radius-1:4px;
 
-    --opacity: 0.7px;
+    --opacity-1: 0.7px;
+    --opasity-2: 0.3px;
     --transition-1: 0.7s;
 
 }
+
 .page {
     display: grid;
 }
+@layer component {
 .page_section {
     display: flex;
     justify-content: center;
+    
+}
 }
 .page_content {
     width: 100%;
     max-width: 1200px;
     padding: var(--spacing-3);
     display: grid;
+    
 }
 
 @media all and (1260px <= width) {
@@ -68,25 +77,31 @@ body {
 }
 
 .hero {
+display: flex;
+   height: 100%;
+     align-items: center;
+     width:676px;
+     margin-top: 100px;
+     
+   
+   
+}
+.hero_content {
     display: grid;
     gap: var(--spacing-5);
     max-width:425px;
-   height: 100%;
-   align-content: center;
-   min-height: 400px;
-   font-family: "HelveticaNeueBold";
-   color: black;
-    
-    
+    color: black;
+    position: relative;
+  
 }
 .hero_section {
     display: flex;
     flex-direction: column;
-    gap: 35px;
-    position: relative;
-    max-height: 60vh;
     justify-content: center;
+    gap: 150px;
     
+    height: 60vh;
+    min-height: 680px;
 }
 
 .brands {
@@ -98,10 +113,13 @@ body {
     flex-wrap: wrap;
 }
 .img_hero {
-    /* position: absolute; */
+     position: absolute; 
+     top: 0px;
+     left: 580px;
 }
 .hero_label {
-    font-size: var(--size-1) ;
+    font-size: var(--size-1);
+    text-transform: uppercase;
 }
 .hero_title {
     font-size: 50px;
@@ -118,26 +136,62 @@ body {
 .button {
 text-decoration: none;
 color: var(--color-black);
-padding: var(--spacing-4);
+padding: var(--spacing-3);
 border-radius: var(--radius-1);
 text-align: center;
 border: 1px solid transparent;
 transition: opacity var(--transition-1);
 }
-.hero_button:hover {
-    opacity:0.7;
+.button:hover {
+    opacity:var(--opacity-1);
     cursor: pointer;
+}
+.button:active {
+    opacity: var(--opacity-2);
 }
 }
 @layer variant {
     .button_primary {
      color: var(--color-white);
      background-color: var(--color-primary);
+     text-decoration: none;
+    
     }
 
     .button_secondary {
      color: var(--color-primary);
      background-color: var(--color-white);
      border-color: var(--color-primary);
+     border-width: 2px;
+     text-decoration: none;
+    }
+}
+.features_section {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    display: grid;
+    gap: var(--spacing-5)
+}
+@layer variant {
+.page_section_light {
+    background-color: var(--color-light);
+}
+}
+.features_title {
+font-size: var(--size-6);
+}
+.features_description {
+    font-size: var(--size-2);
+}
+/* .feat_card {
+
+} */
+@layer component {
+    .icon {
+        height: 48px;
+        width: 48px;
+        display:block;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
 }
