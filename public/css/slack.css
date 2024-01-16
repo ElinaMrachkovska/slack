@@ -45,35 +45,13 @@ body {
 .page {
     display: grid;
 }
-@layer component {
-.page_section {
-    display: flex;
-    justify-content: center;
-    
-}
-}
+
 .page_content {
     width: 100%;
     max-width: 1200px;
     padding: var(--spacing-3);
     display: grid;
     
-}
-
-@media all and (1260px <= width) {
-    .page_content {
-        max-width: var(--page-width-d);
-    }
-}
-@media all and (1000px <= width < 1260px) {
-    .page_content {
-        max-width: var(--page-width-medium);
-    }
-}
-@media all and (width < 1000px) {
-    .page_content {
-        max-width: var(--page-width-small);
-    }
 }
 
 .hero {
@@ -149,6 +127,18 @@ transition: opacity var(--transition-1);
 .button:active {
     opacity: var(--opacity-2);
 }
+  .icon {
+        height: 48px;
+        width: 48px;
+        display:block;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .page_section {
+    display: flex;
+    justify-content: center;
+    
+}
 }
 @layer variant {
     .button_primary {
@@ -157,7 +147,9 @@ transition: opacity var(--transition-1);
      text-decoration: none;
     
     }
-
+.page_section_light {
+    background-color: var(--color-light);
+}
     .button_secondary {
      color: var(--color-primary);
      background-color: var(--color-white);
@@ -172,11 +164,7 @@ transition: opacity var(--transition-1);
     display: grid;
     gap: var(--spacing-5)
 }
-@layer variant {
-.page_section_light {
-    background-color: var(--color-light);
-}
-}
+
 .features_title {
 font-size: var(--size-6);
 }
@@ -186,12 +174,19 @@ font-size: var(--size-6);
 /* .feat_card {
 
 } */
-@layer component {
-    .icon {
-        height: 48px;
-        width: 48px;
-        display:block;
-        background-repeat: no-repeat;
-        background-position: center center;
+
+@media all and (1260px <= width) {
+    .page_content {
+        max-width: var(--page-width-d);
+    }
+}
+@media all and (1000px <= width < 1260px) {
+    .page_content {
+        max-width: var(--page-width-medium);
+    }
+}
+@media all and (width < 1000px) {
+    .page_content {
+        max-width: var(--page-width-small);
     }
 }
