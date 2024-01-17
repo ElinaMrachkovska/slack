@@ -253,6 +253,7 @@ justify-self: flex-end;
     @media all and (width < 1000px) {
         .page_content {
             max-width: var(--page-width-small);
+            width: 100%;
         }
         .img_hero {
             
@@ -277,16 +278,20 @@ justify-self: flex-end;
     }
     @media all and (width < 600px) {
         .features_grid_4 {
-        grid-template-columns: 2fr 2fr;
+        grid-template-columns: 1fr;
+        width: 100%;
         }
     }
     @media all and (width < 400px) {
         .features_grid_4 {
         grid-template-columns: 1fr;
+        width: 100%;
         }
         .hero_buttons {
             display: grid;
           grid-template-columns: 1fr;   
-          gap: var(--spacing-2)
+          gap: var(--spacing-2);
+          width: 100%;
     }
+}
 }
