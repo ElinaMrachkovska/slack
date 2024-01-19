@@ -256,7 +256,7 @@ justify-self: flex-end;
             width: 100%;
         }
         .img_hero {
-            
+           width:100%; 
             position: static;
             order: -1;
            
